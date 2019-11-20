@@ -15,8 +15,13 @@
  public class Lab9{
  	public static void main(String[] args){
 
- 		double randArray[];
- 		double randomNum = (Math.random() * ((100- 1) + 1)) + 1;
+ 		double randArray[] = new double[20];
+ 		
 
+ 		for(int i = 0; i < 20; i++){
+ 			double randomNum = (Math.random() * ((100- 1) + 1)) + 1;
+ 			randArray[i] = randomNum;
+ 			System.out.println(randArray[i]);
+ 		}
  	}
  }
