@@ -22,6 +22,9 @@
  			double randomNum = (Math.random() * ((100- 1) + 1)) + 1;
  			randArray[i] = randomNum;
  			System.out.println(randArray[i]);
+
+ 			//for file reading and writing
+ 			//https://www.codejava.net/java-se/file-io/how-to-read-and-write-text-file-in-java
  		}
  	}
  }
