@@ -7,3 +7,16 @@
  Write a recursive method which takes an integer number and returns the sum of the numbers from 1 to that number.
  The method must solve the problem recursively. Then write an application which calls the method with a few different numbers and displays the return value of the method.
  */
+
+ import java.util.Scanner;
+ import java.lang.Math;
+ import java.util.Random;
+
+ public class Lab9{
+ 	public static void main(String[] args){
+
+ 		double randArray[];
+ 		double randomNum = (Math.random() * ((100- 1) + 1)) + 1;
+
+ 	}
+ }
