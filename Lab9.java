@@ -11,20 +11,45 @@
  import java.util.Scanner;
  import java.lang.Math;
  import java.util.Random;
+ import java.io.FileReader;
+ import java.io.FileWriter;
+ import java.io.IOException;
 
  public class Lab9{
  	public static void main(String[] args){
 
- 		double randArray[] = new double[20];
+ 		//Random randomNum = new Random();
+ 		int randArray[] = new int[20];
+ 		//FileReader reader = new FileReader("randNum.txt");
  		
-
  		for(int i = 0; i < 20; i++){
- 			double randomNum = (Math.random() * ((100- 1) + 1)) + 1;
- 			randArray[i] = randomNum;
+ 			
+
+ 			randArray[i] = RandNum(1,100);
  			System.out.println(randArray[i]);
 
- 			//for file reading and writing
- 			//https://www.codejava.net/java-se/file-io/how-to-read-and-write-text-file-in-java
+ 			//write to file
+ 			try{
+ 				FileWriter writer = new FileWriter("randNum.txt", true);
+
+ 				writer.write(randArray[i]);
+ 				writer.write("\n");
+
+ 			}catch(IOException e){
+ 				e.printStackTrace();
+ 			}
  		}
  	}
+
+ 	 	private static int RandNum(int min, int max) {
+
+		if (min >= max) {
+			throw new IllegalArgumentException("max must be greater than min");
+		}
+
+		Random r = new Random();
+		return r.nextInt((max - min) + 1) + min;
+	}
+
  }
+
