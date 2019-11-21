@@ -8,9 +8,8 @@
  The method must solve the problem recursively. Then write an application which calls the method with a few different numbers and displays the return value of the method.
  */
 
- import java.util.Scanner;
- import java.lang.Math;
- import java.util.Random;
+ import java.util.*;
+ import java.lang.*;
  import java.io.*;
 
  public class Lab9{
@@ -18,28 +17,14 @@
 
  		//Random randomNum = new Random();
  		int randArray[] = new int[20];
- 		//FileReader reader = new FileReader("randNum.txt");
+ 		randArray[i] = RandNum(1,100);
+ 		System.out.println(randArray[i]);
  		
- 		for(int i = 0; i < 20; i++){
- 			
+ 		
 
- 			randArray[i] = RandNum(1,100);
- 			System.out.println(randArray[i]);
-
- 			//write to file
- 			try{
- 				FileWriter fWriter = new FileWriter("randNum.txt");
- 				PrintWriter pWriter = new PrintWriter(fWriter);
- 				pWriter.println(randArray[i]);
- 				pWriter.println("\n");
- 				pWriter.close();
- 			}catch(IOException e){
- 				e.printStackTrace();
- 			}
- 		}
  	}
 
- 	 	private static int RandNum(int min, int max) {
+ 	private static int RandNum(int min, int max) {
 
 		if (min >= max) {
 			throw new IllegalArgumentException("max must be greater than min");
