@@ -30,8 +30,18 @@
  		fWriter.flush();
  		fWriter.close();
  		//Random randomNum = new Random();
- 		
+ 		BufferedReader fReader = null;
+ 		fReader = new BufferedReader(new FileReader("randNum.txt"));
 
+ 		String line = fReader.readLine();
+ 		while(line != null){
+ 			System.out.println(line);
+ 			line = fReader.readLine();
+ 			//parseInt into an array?
+ 			//find average
+ 			//https://www.mkyong.com/java/java-convert-string-to-int/
+ 		}
+ 		fReader.close();
 
 
 
