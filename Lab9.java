@@ -18,6 +18,7 @@
  	public static void main(String[] args) throws IOException{
 
  		int randArray[] = new int[20];
+ 		int sum = 0;
  		BufferedWriter fWriter = null;
  		fWriter = new BufferedWriter(new FileWriter("randNum.txt"));
 
@@ -35,12 +36,13 @@
 
  		String line = fReader.readLine();
  		while(line != null){
- 			System.out.println(line);
+
+ 			//System.out.println(line);
+ 			sum += Integer.parseInt(line);
  			line = fReader.readLine();
- 			//parseInt into an array?
- 			//find average
- 			//https://www.mkyong.com/java/java-convert-string-to-int/
+
  		}
+ 		System.out.println("Average = " + sum/20);
  		fReader.close();
 
 
