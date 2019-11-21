@@ -11,9 +11,7 @@
  import java.util.Scanner;
  import java.lang.Math;
  import java.util.Random;
- import java.io.FileReader;
- import java.io.FileWriter;
- import java.io.IOException;
+ import java.io.*;
 
  public class Lab9{
  	public static void main(String[] args){
@@ -30,11 +28,11 @@
 
  			//write to file
  			try{
- 				FileWriter writer = new FileWriter("randNum.txt", true);
-
- 				writer.write(randArray[i]);
- 				writer.write("\n");
-
+ 				FileWriter fWriter = new FileWriter("randNum.txt");
+ 				PrintWriter pWriter = new PrintWriter(fWriter);
+ 				pWriter.println(randArray[i]);
+ 				pWriter.println("\n");
+ 				pWriter.close();
  			}catch(IOException e){
  				e.printStackTrace();
  			}
